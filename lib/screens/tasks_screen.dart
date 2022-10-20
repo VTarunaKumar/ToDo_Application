@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_app/Widgets/task_list.dart';
+import 'add_task_screen.dart';
 
-class TasksScreen extends StatefulWidget {
-  const TasksScreen({Key? key}) : super(key: key);
-
-  @override
-  State<TasksScreen> createState() => _TasksScreenState();
-}
-
-class _TasksScreenState extends State<TasksScreen> {
+class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent,
+      backgroundColor: Colors.deepPurpleAccent,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          //
+          showModalBottomSheet(
+              context: context, builder: (context) => AddTaskScreen());
         },
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.deepPurpleAccent,
         child: Icon(Icons.add),
       ),
       body: Column(
@@ -29,12 +24,12 @@ class _TasksScreenState extends State<TasksScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 CircleAvatar(
-                    radius: 30,
+                    radius: 25,
                     backgroundColor: Colors.white,
                     child: Icon(
                       Icons.list,
                       size: 30,
-                      color: Colors.lightBlueAccent,
+                      color: Colors.deepPurpleAccent,
                     )),
                 SizedBox(
                   height: 10,
