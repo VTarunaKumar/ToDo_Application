@@ -35,10 +35,11 @@ class AddTaskScreen extends StatelessWidget {
               TextField(
                 textAlign: TextAlign.center,
                 decoration: new InputDecoration(
-                    hintText: "Add your next Task",
-                    hintStyle: TextStyle(
-                      color: Colors.grey,
-                    )),
+                  hintText: "Add your next Task",
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                  ),
+                ),
               ),
               SizedBox(
                 height: 30,
@@ -54,7 +55,7 @@ class AddTaskScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 25, color: Colors.white),
                 ),
-              )
+              ),
             ],
           ),
         ),
