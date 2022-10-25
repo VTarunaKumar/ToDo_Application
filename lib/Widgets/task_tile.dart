@@ -4,7 +4,11 @@ import 'package:to_do_app/models/task.dart';
 class TaskTile extends StatelessWidget {
   final bool isChecked;
   final String taskTitle;
-  TaskTile({required this.isChecked, required this.taskTitle});
+  final Function(bool?) checkBoxCallBack;
+  TaskTile(
+      {required this.isChecked,
+      required this.taskTitle,
+      required this.checkBoxCallBack});
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -17,7 +21,7 @@ class TaskTile extends StatelessWidget {
         trailing: Checkbox(
           activeColor: Colors.deepPurpleAccent,
           value: isChecked,
-          onChanged: null,
+          onChanged: checkBoxCallBack,
         ));
   }
 }
